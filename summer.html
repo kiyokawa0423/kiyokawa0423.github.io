@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Introduction to jQuery</title>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js
+"
+integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+</script>
+<script>
+$(document).ready(function(){
+$("p").css("color", "red");
+});
+</script>
+</head>
+<body background="d8.jpg">
+    <p>ROCK IN JAPAN</p>
+    <h2>夏休みの思い出</h2>
+    <h3>画像をクリックしてね。</h3>
+<img id="mypic" onclick="slideshow()" src="01.jpeg" width="1000" height="800">
+            <script>
+            let pics_src = new Array("01.jpeg","02.jpeg","03.jpeg");
+            let num = 0;
+ 
+            function slideshow(){
+                if (num == 2) {
+                    num = 0;
+                }
+                else {
+                    num ++;
+                }
+                document.getElementById("mypic").src=pics_src[num];
+            }
+            </script>
+</body>
+</html>
